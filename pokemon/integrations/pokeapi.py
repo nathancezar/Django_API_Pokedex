@@ -11,7 +11,7 @@ class PokeApi:
         :name: nome do pokemon
         """
         pokeapi_responde = requests.get(
-            f"{self.API_URL}/{name}"
+            f"{self.API_URL}/pokemon/{name}"
         )
         pokeapi_responde.raise_for_status()
 
@@ -23,7 +23,7 @@ class PokeApi:
         :id: numero do pokemon
         """
         pokeapi_responde = requests.get(
-            f"{self.API_URL}/{id}"
+            f"{self.API_URL}/pokemon/{id}"
         )
         pokeapi_responde.raise_for_status()
 
